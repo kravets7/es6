@@ -17,15 +17,6 @@ let person = {
     }
 };
 
-// Object.defineProperty(person, 'fullName', {
-//     get: function() {
-//         return this.firstName + ' ' + this.lastName;
-//     },
-//     set: function(value) {
-//         this.firstName = value;
-//     }
-// });
-
 console.log(person);
 // person.sayHello();
 
