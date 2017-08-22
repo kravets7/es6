@@ -1,3 +1,4 @@
+
 class Task {
     constructor(title = Task.getDefaultTitle()) {
         this.title = title;
@@ -28,17 +29,17 @@ class Task {
     }
 }
 
-Task.count = 0;
+Task.count = 0; //static property
 
 let task = new Task('Убрать комнату');
-console.log(task.done, task._done);
-task.complete();
-console.log(task.done, task._done);
+console.log(task);
+/*task.complete();
+console.log(task.done, task._done);*/
 
 
 
-// let Task = class {
-//     constructor() {
-//         console.log('Creating a task');
-//     }
-// }
+let Task = class {
+    constructor() {
+        console.log('Creating a task');
+    }
+}

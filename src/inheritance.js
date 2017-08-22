@@ -1,4 +1,4 @@
-class Task {
+let Task = class {
     constructor(title) {
         this._title = title;
         this.done = false;
@@ -26,24 +26,24 @@ class Task {
 
 Task.count = 0;
 
-class SubTask extends Task {
+let SubTask = class extends Task {
     constructor(title, parent) {
         super(title);
         this.parent = parent;
-        console.log('Создание подзадачи');
+        // console.log('Создание подзадачи');
     }
     
     complete() {
         super.complete();
-        console.log(`Подзадача "${this.title}" выполнена`);
+        // console.log(`Подзадача "${this.title}" выполнена`);
     }
 }
 
 let task = new Task('Изучить JavaScript');
 let subtask = new SubTask('Изучить ES6', task);
-
+/*
 console.log(SubTask.getDefaultTitle());
-console.log(SubTask.count);
+console.log(SubTask.count);*/
 
 task.complete();
 subtask.complete();
