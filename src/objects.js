@@ -1,3 +1,4 @@
+/*
 let firstName = 'Bill',
     lastName = 'Gates',
     email = 'billgates@microsoft.com';
@@ -18,27 +19,27 @@ let person = {
 };
 
 console.log(person);
-// person.sayHello();
+person.sayHello();
 
-// person.firstName;
-// person['firstName'];
+person.firstName;
+person['firstName'];
 
-// let property = 'lastName';
-// person[property]; // person['firstName']
-// person = {
-//     [property]: 'Bill'
-// };
+let property = 'lastName';
+person[property]; // person['firstName']
+person = {
+    [property]: 'Bill'
+};
+*/
 
 
-// function createCar(property, value) {
-//     return {
-//         [property]: value,
-//         ['_' + property]: value,
-//         [property.toUpperCase()]: value,
-//         ['get' + property]() {
-//             return this[property];
-//         }
-//     };
-// }
+function createCar(property, value) {
+    return {
+        [property]: value,
+        ['_' + property]: value,
+        ['get' + property]() {
+            return this[property];
+        }
+    };
+}
 
-// console.log(createCar('vin', 1));
+console.log(createCar(12, 1));

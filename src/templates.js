@@ -1,11 +1,10 @@
-function greet(name) {
-    console.log(`Hello ${name}`.toUpperCase());
-}
+/*let name = 'Vasya';
 
-greet('Bill');
+console.log(`Hello ${name.toUpperCase()} sdgfg ${false ? 'Misha' : "Grisha"}`);*/
 
 
-function createEmail(to, from, subject, message) {
+
+/*function createEmail(to, from, subject, message) {
     console.log(`
         To: ${to}
         From: ${from}
@@ -14,19 +13,14 @@ function createEmail(to, from, subject, message) {
     `);
 }
 
-createEmail('john@mail.com', 'jane@mail.com', 'Hello', 'How are you doing?');
+createEmail('john@mail.com', 'jane@mail.com', 'Hello', 'How are you doing?');*/
 
-
-function add(x, y) {
-    console.log(`${x} + ${y} = ${parseInt(x) + parseInt(y)}`);
-}
-
-add('5', '7');
 
 
 let name = 'Bill';
-console.log(upperName`Hello ${name}`);
+let age = 17;
+console.log(upperName`Hello ${name} ${age}`);
 
 function upperName(literals, ...values) {
-    return literals[0] + value.toUpperCase();
+    return literals[0] + values[0].toUpperCase();
 }

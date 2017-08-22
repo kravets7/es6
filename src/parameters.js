@@ -14,16 +14,24 @@
 //     }
 // }
 
-function greet(greeting = 'Hello', name = 'friend') {
+/*function greet(greeting = 'Hello', name = 'friend') {
     console.log(`${greeting} ${name}`);
 }
 
 greet('Hi', 'Bill');
 greet('Hi');
 greet(undefined, 'Bill');
-greet();
+greet();*/
+
+function foo({name = 12} = {}) {
+    console.log(name);
+}
+
+foo({name: "Misha"});
+foo();
 
 
+/*
 function sum() {
     console.log(arguments instanceof Array);
     
@@ -55,4 +63,4 @@ function sum(...values) {
 }
 
 
-sum(5, 7, 2, 10);
+sum(5, 7, 2, 10);*/

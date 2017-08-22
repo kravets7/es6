@@ -1,4 +1,4 @@
-let add = (x, y) => x + y;
+/*let add = (x, y) => x + y;
 
 let square = x => x * x;
 
@@ -7,8 +7,6 @@ let giveMeAnswer = () => 42;
 let log = () => console.log('Logging');
 
 let multiply = (x, y) => {
-    let result = x * y;
-    return result;
 };
 
 let getPerson = () => ({ name: 'John' });
@@ -22,26 +20,33 @@ let sum = 0;
 
 numbers.forEach(num => sum += num);
 
-let squared = numbers.map(n => n * n);
+let squared = numbers.map(n => n * n);*/
 
 
 
 let person = {
     name: 'Bob',
-    greet: function() {
-        global.setTimeout(() => {
-            console.log('Hello, my name is ' + this.name);
-            console.log('"this" is', this);
-        }, 2000);
+    foo: {
+        greet: function() {
+            (() => {
+                console.log('Hello, my name is ' + this.name);
+                console.log('"this" is', this);
+            })();
+        }
+    }
+
+};
+
+/*person.foo.greet();*/
+
+let Task = (cb) => {
+    console.log(this.name);
+    console.log('Creating a task');
+    if (typeof cb === 'function') {
+        console.log(cb);
+        cb();
     }
 };
 
-person.greet();
-
-let Task = () => console.log('Creating a task');
-
-let task = new Task();
-
-Task.bind();
-Task.call();
-Task.apply();
+/*let task = new Task();*/
+Task(() => console.log(12));
