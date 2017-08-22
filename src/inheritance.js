@@ -39,18 +39,6 @@ class SubTask extends Task {
     }
 }
 
-// let Task = class {
-    
-// }
-
-// let SubTask = class extends Task {
-//     constructor() {
-//         super();
-//         console.log('Creating a subtask');
-//     }
-// }
-
-
 let task = new Task('Изучить JavaScript');
 let subtask = new SubTask('Изучить ES6', task);
 
@@ -62,3 +50,16 @@ subtask.complete();
 
 console.log(task);
 console.log(subtask);
+
+
+
+// let Task = class {
+
+// }
+
+// let SubTask = class extends Task {
+//     constructor() {
+//         super();
+//         console.log('Creating a subtask');
+//     }
+// }
