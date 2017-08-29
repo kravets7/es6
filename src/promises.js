@@ -1,12 +1,6 @@
 'use strict';
 
-let movieList = document.getElementById('movies');
-
-function addMovieToList(movie) {
-    let img = document.createElement('img');
-    img.src = movie.Poster;
-    movieList.appendChild(img);
-}
+const movies = [];
 
 function getData(url) {
     return new Promise(function(resolve, reject) {
@@ -29,8 +23,8 @@ function getData(url) {
     });
 }
 
-let batman = getData('http://www.omdbapi.com/?s=batman');
-let superman = getData('http://www.omdbapi.com/?s=superman');
+// let batman = getData('http://www.omdbapi.com/?s=batman');
+// let superman = getData('http://www.omdbapi.com/?s=superman');
 
 // batman
 //     .then(movies =>
