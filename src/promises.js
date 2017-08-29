@@ -1,5 +1,24 @@
 'use strict';
 
+/*
+let promise = new Promise((resolve, reject) => {
+    resolve(15);
+});
+
+promise
+    .then(function resultHandler(res) {
+        console.log(10, res);
+        throw "Error";
+    })
+    .then(function (res) {
+        console.log(14, res);
+    })
+    .catch(function errorHandler(err) {
+        console.log(13, err);
+    });*/
+
+
+
 const movies = [];
 
 function getData(url) {
@@ -23,20 +42,25 @@ function getData(url) {
     });
 }
 
-// let batman = getData('http://www.omdbapi.com/?s=batman');
-// let superman = getData('http://www.omdbapi.com/?s=superman');
+let batman = getData('http://www.omdbapi.com/?s=batman');
+let superman = getData('http://www.omdbapi.com/?s=superman');
 
-// batman
-//     .then(movies =>
-//         movies.forEach(movie =>
-//             addMovieToList(movie)))
-//     .catch(error => console.error(error));
+function addMovieToList(movie) {
+    movies.push(movie);
+    console.log(movies);
+}
+
+batman
+    .then(movies =>
+        movies.forEach(movie =>
+            addMovieToList(movie)))
+    .catch(error => console.error(error));
     
-// superman
-//     .then(movies =>
-//         movies.forEach(movie =>
-//             addMovieToList(movie)))
-//     .catch(error => console.error(error));
+superman
+    .then(movies =>
+        movies.forEach(movie =>
+            addMovieToList(movie)))
+    .catch(error => console.error(error));
 
 Promise.race([batman, superman])
     .then(movies =>

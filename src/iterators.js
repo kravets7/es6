@@ -1,3 +1,4 @@
+/*
 let xmen = ['Cyclops', 'Wolverine', 'Rogue'];
 
 for (let xman of xmen) {
@@ -11,9 +12,9 @@ let next = iterator.next();
 while (!next.done) {
     console.log(next.value);
     next = iterator.next();
-}
+}*/
 
-let randomGenerator = {
+/*let randomGenerator = {
     generate() {
         return this[Symbol.iterator]();
     },
@@ -33,8 +34,8 @@ let randomGenerator = {
 };
 
 let random = randomGenerator.generate();
-console.log(random.next().value);
-/*
+console.log(random.next().value);*/
+
 
 class ArrayIterator {
     constructor(array) {
@@ -74,4 +75,4 @@ taskList.addTasks('Изучить JavaScript', 'Изучить ES6', 'Купит
 
 for (let task of taskList) {
     console.log(task);
-}*/
+}
